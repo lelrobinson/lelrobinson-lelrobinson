@@ -6,11 +6,11 @@
         <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
         <meta name="mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-capable" content="yes">
-        <link rel="stylesheet" href="css/leaflet.css"><link rel="stylesheet" href="css/.Locate.min.css">
+        <link rel="stylesheet" href="css/leaflet.css"><link rel="stylesheet" href="css/L.Control.Locate.min.css">
         <link rel="stylesheet" href="css/qgis2web.css"><link rel="stylesheet" href="css/fontawesome-all.min.css">
         <style>
         #map {
-            width: 1081px;
+          width: 1081px;
             height: 540px;
         }
         </style>
@@ -21,7 +21,6 @@
         </div>
         <script src="js/qgis2web_expressions.js"></script>
         <script src="js/leaflet.js"></script><script src="js/L.Control.Locate.min.js"></script>
-        <script src="js/multi-style-layer.js"></script>
         <script src="js/leaflet.rotatedMarker.js"></script>
         <script src="js/leaflet.pattern.js"></script>
         <script src="js/leaflet-hash.js"></script>
@@ -29,22 +28,21 @@
         <script src="js/rbush.min.js"></script>
         <script src="js/labelgun.min.js"></script>
         <script src="js/labels.js"></script>
-        <script src="data/CDCSocialVulnIndex_1.js"></script>
-        <script src="data/SubwayLines_2.js"></script>
-        <script src="data/UrbanFarming_3.js"></script>
-        <script src="data/Parenting_4.js"></script>
-        <script src="data/NutritionandHealth_5.js"></script>
-        <script src="data/HASTEP_6.js"></script>
-        <script src="data/FMNP_7.js"></script>
-        <script src="data/4HPYD_8.js"></script>
-        <script src="data/CUCEsites_9.js"></script>
-        <script src="data/CUCEOffices_10.js"></script>
-        <script src="data/CityCouncilDistrics_11.js"></script>
-        <script src="data/CommunityDistricts_12.js"></script>
-        <script src="data/StateAssemblyDistricts_13.js"></script>
-        <script src="data/CongressionalDistricts_14.js"></script>
-        <script src="data/StateSenateDistricts_15.js"></script>
-        <script src="data/FEMAVACCINATIONSITES_16.js"></script>
+        <script src="data/SVI2018_NEWYORK_tract_1.js"></script>
+        <script src="data/queens_2.js"></script>
+        <script src="data/bronx_3.js"></script>
+        <script src="data/manhattan_4.js"></script>
+        <script src="data/brooklyn_5.js"></script>
+        <script src="data/CityCouncilDistrics_6.js"></script>
+        <script src="data/CommunityDistricts_7.js"></script>
+        <script src="data/StateAssemblyDistricts_8.js"></script>
+        <script src="data/CongressionalDistricts_9.js"></script>
+        <script src="data/StateSenateDistricts_10.js"></script>
+        <script src="data/CUCEsites_11.js"></script>
+        <script src="data/CUCEOffices_12.js"></script>
+        <script src="data/PopUpVacSite_13.js"></script>
+        <script src="data/FEMAVacSites_14.js"></script>
+        <script src="data/CommunityBasedVacSites_15.js"></script>
         <script>
         var highlightLayer;
         function highlightFeature(e) {
@@ -74,7 +72,7 @@
         });
         layer_CartoDbPositron_0;
         map.addLayer(layer_CartoDbPositron_0);
-        function pop_CDCSocialVulnIndex_1(feature, layer) {
+        function pop_SVI2018_NEWYORK_tract_1(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -470,10 +468,10 @@
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
-        function style_CDCSocialVulnIndex_1_0(feature) {
+        function style_SVI2018_NEWYORK_tract_1_0(feature) {
             if (feature.properties['RPL_THEMES'] >= 0.000000 && feature.properties['RPL_THEMES'] <= 0.250100 ) {
                 return {
-                pane: 'pane_CDCSocialVulnIndex_1',
+                pane: 'pane_SVI2018_NEWYORK_tract_1',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -482,13 +480,13 @@
                 weight: 1.0,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(237,248,251,1.0)',
+                fillColor: 'rgba(252,251,253,1.0)',
                 interactive: true,
             }
             }
-            if (feature.properties['RPL_THEMES'] >= 0.250100 && feature.properties['RPL_THEMES'] <= 0.500100 ) {
+            if (feature.properties['RPL_THEMES'] >= 0.250100 && feature.properties['RPL_THEMES'] <= 0.501000 ) {
                 return {
-                pane: 'pane_CDCSocialVulnIndex_1',
+                pane: 'pane_SVI2018_NEWYORK_tract_1',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -497,13 +495,13 @@
                 weight: 1.0,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(166,187,218,1.0)',
+                fillColor: 'rgba(201,202,227,1.0)',
                 interactive: true,
             }
             }
-            if (feature.properties['RPL_THEMES'] >= 0.500100 && feature.properties['RPL_THEMES'] <= 0.750000 ) {
+            if (feature.properties['RPL_THEMES'] >= 0.501000 && feature.properties['RPL_THEMES'] <= 0.750100 ) {
                 return {
-                pane: 'pane_CDCSocialVulnIndex_1',
+                pane: 'pane_SVI2018_NEWYORK_tract_1',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -512,13 +510,13 @@
                 weight: 1.0,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(137,107,178,1.0)',
+                fillColor: 'rgba(124,118,182,1.0)',
                 interactive: true,
             }
             }
-            if (feature.properties['RPL_THEMES'] >= 0.750000 && feature.properties['RPL_THEMES'] <= 1.000000 ) {
+            if (feature.properties['RPL_THEMES'] >= 0.750100 && feature.properties['RPL_THEMES'] <= 1.000000 ) {
                 return {
-                pane: 'pane_CDCSocialVulnIndex_1',
+                pane: 'pane_SVI2018_NEWYORK_tract_1',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -527,25 +525,25 @@
                 weight: 1.0,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(129,15,124,1.0)',
+                fillColor: 'rgba(63,0,125,1.0)',
                 interactive: true,
             }
             }
         }
-        map.createPane('pane_CDCSocialVulnIndex_1');
-        map.getPane('pane_CDCSocialVulnIndex_1').style.zIndex = 401;
-        map.getPane('pane_CDCSocialVulnIndex_1').style['mix-blend-mode'] = 'normal';
-        var layer_CDCSocialVulnIndex_1 = new L.geoJson(json_CDCSocialVulnIndex_1, {
+        map.createPane('pane_SVI2018_NEWYORK_tract_1');
+        map.getPane('pane_SVI2018_NEWYORK_tract_1').style.zIndex = 401;
+        map.getPane('pane_SVI2018_NEWYORK_tract_1').style['mix-blend-mode'] = 'normal';
+        var layer_SVI2018_NEWYORK_tract_1 = new L.geoJson(json_SVI2018_NEWYORK_tract_1, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_CDCSocialVulnIndex_1',
-            layerName: 'layer_CDCSocialVulnIndex_1',
-            pane: 'pane_CDCSocialVulnIndex_1',
-            onEachFeature: pop_CDCSocialVulnIndex_1,
-            style: style_CDCSocialVulnIndex_1_0,
+            dataVar: 'json_SVI2018_NEWYORK_tract_1',
+            layerName: 'layer_SVI2018_NEWYORK_tract_1',
+            pane: 'pane_SVI2018_NEWYORK_tract_1',
+            onEachFeature: pop_SVI2018_NEWYORK_tract_1,
+            style: style_SVI2018_NEWYORK_tract_1_0,
         });
-        bounds_group.addLayer(layer_CDCSocialVulnIndex_1);
-        function pop_SubwayLines_2(feature, layer) {
+        bounds_group.addLayer(layer_SVI2018_NEWYORK_tract_1);
+        function pop_queens_2(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -562,43 +560,40 @@
                     <tr>\
                         <td colspan="2">' + (feature.properties['name'] !== null ? autolinker.link(feature.properties['name'].toLocaleString()) : '') + '</td>\
                     </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['total site'] !== null ? autolinker.link(feature.properties['total site'].toLocaleString()) : '') + '</td>\
+                    </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
-        function style_SubwayLines_2_0() {
+        function style_queens_2_0() {
             return {
-                pane: 'pane_SubwayLines_2',
+                pane: 'pane_queens_2',
                 opacity: 1,
                 color: 'rgba(0,0,0,1.0)',
                 dashArray: '',
-                lineCap: 'round',
-                lineJoin: 'round',
+                lineCap: 'square',
+                lineJoin: 'bevel',
                 weight: 1,
                 fillOpacity: 0,
                 interactive: true,
             }
         }
-        function style_SubwayLines_2_1() {
-            return {
-                pane: 'pane_SubwayLines_2',
-                interactive: true,
-            }
-        }
-        map.createPane('pane_SubwayLines_2');
-        map.getPane('pane_SubwayLines_2').style.zIndex = 402;
-        map.getPane('pane_SubwayLines_2').style['mix-blend-mode'] = 'normal';
-        var layer_SubwayLines_2 = new L.geoJson.multiStyle(json_SubwayLines_2, {
+        map.createPane('pane_queens_2');
+        map.getPane('pane_queens_2').style.zIndex = 402;
+        map.getPane('pane_queens_2').style['mix-blend-mode'] = 'normal';
+        var layer_queens_2 = new L.geoJson(json_queens_2, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_SubwayLines_2',
-            layerName: 'layer_SubwayLines_2',
-            pane: 'pane_SubwayLines_2',
-            onEachFeature: pop_SubwayLines_2,
-            styles: [style_SubwayLines_2_0,style_SubwayLines_2_1,]
+            dataVar: 'json_queens_2',
+            layerName: 'layer_queens_2',
+            pane: 'pane_queens_2',
+            onEachFeature: pop_queens_2,
+            style: style_queens_2_0,
         });
-        bounds_group.addLayer(layer_SubwayLines_2);
-        function pop_UrbanFarming_3(feature, layer) {
+        bounds_group.addLayer(layer_queens_2);
+        function pop_bronx_3(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -613,400 +608,397 @@
             });
             var popupContent = '<table>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['activity'] !== null ? autolinker.link(feature.properties['activity'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['name'] !== null ? autolinker.link(feature.properties['name'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['sitename'] !== null ? autolinker.link(feature.properties['sitename'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['address'] !== null ? autolinker.link(feature.properties['address'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['zipcode'] !== null ? autolinker.link(feature.properties['zipcode'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['total site'] !== null ? autolinker.link(feature.properties['total site'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
-        function style_UrbanFarming_3_0() {
+        function style_bronx_3_0() {
             return {
-                pane: 'pane_UrbanFarming_3',
-                radius: 5.0,
-                opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(195,164,49,1.0)',
-                interactive: true,
-            }
-        }
-        map.createPane('pane_UrbanFarming_3');
-        map.getPane('pane_UrbanFarming_3').style.zIndex = 403;
-        map.getPane('pane_UrbanFarming_3').style['mix-blend-mode'] = 'normal';
-        var layer_UrbanFarming_3 = new L.geoJson(json_UrbanFarming_3, {
-            attribution: '',
-            interactive: true,
-            dataVar: 'json_UrbanFarming_3',
-            layerName: 'layer_UrbanFarming_3',
-            pane: 'pane_UrbanFarming_3',
-            onEachFeature: pop_UrbanFarming_3,
-            pointToLayer: function (feature, latlng) {
-                var context = {
-                    feature: feature,
-                    variables: {}
-                };
-                return L.circleMarker(latlng, style_UrbanFarming_3_0(feature));
-            },
-        });
-        bounds_group.addLayer(layer_UrbanFarming_3);
-        function pop_Parenting_4(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    if (typeof layer.closePopup == 'function') {
-                        layer.closePopup();
-                    } else {
-                        layer.eachLayer(function(feature){
-                            feature.closePopup()
-                        });
-                    }
-                },
-                mouseover: highlightFeature,
-            });
-            var popupContent = '<table>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['program'] !== null ? autolinker.link(feature.properties['program'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['project'] !== null ? autolinker.link(feature.properties['project'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['activity'] !== null ? autolinker.link(feature.properties['activity'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['audience'] !== null ? autolinker.link(feature.properties['audience'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['sitename'] !== null ? autolinker.link(feature.properties['sitename'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['address'] !== null ? autolinker.link(feature.properties['address'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['Latitude'] !== null ? autolinker.link(feature.properties['Latitude'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['Longitude'] !== null ? autolinker.link(feature.properties['Longitude'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
-        }
-
-        function style_Parenting_4_0() {
-            return {
-                pane: 'pane_Parenting_4',
-                radius: 5.0,
-                opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(29,10,200,1.0)',
-                interactive: true,
-            }
-        }
-        map.createPane('pane_Parenting_4');
-        map.getPane('pane_Parenting_4').style.zIndex = 404;
-        map.getPane('pane_Parenting_4').style['mix-blend-mode'] = 'normal';
-        var layer_Parenting_4 = new L.geoJson(json_Parenting_4, {
-            attribution: '',
-            interactive: true,
-            dataVar: 'json_Parenting_4',
-            layerName: 'layer_Parenting_4',
-            pane: 'pane_Parenting_4',
-            onEachFeature: pop_Parenting_4,
-            pointToLayer: function (feature, latlng) {
-                var context = {
-                    feature: feature,
-                    variables: {}
-                };
-                return L.circleMarker(latlng, style_Parenting_4_0(feature));
-            },
-        });
-        bounds_group.addLayer(layer_Parenting_4);
-        function pop_NutritionandHealth_5(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    if (typeof layer.closePopup == 'function') {
-                        layer.closePopup();
-                    } else {
-                        layer.eachLayer(function(feature){
-                            feature.closePopup()
-                        });
-                    }
-                },
-                mouseover: highlightFeature,
-            });
-            var popupContent = '<table>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['project'] !== null ? autolinker.link(feature.properties['project'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['activity'] !== null ? autolinker.link(feature.properties['activity'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['sitename'] !== null ? autolinker.link(feature.properties['sitename'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['address'] !== null ? autolinker.link(feature.properties['address'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['zipcode'] !== null ? autolinker.link(feature.properties['zipcode'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
-        }
-
-        function style_NutritionandHealth_5_0() {
-            return {
-                pane: 'pane_NutritionandHealth_5',
-                radius: 5.0,
-                opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(227,26,28,1.0)',
-                interactive: true,
-            }
-        }
-        map.createPane('pane_NutritionandHealth_5');
-        map.getPane('pane_NutritionandHealth_5').style.zIndex = 405;
-        map.getPane('pane_NutritionandHealth_5').style['mix-blend-mode'] = 'normal';
-        var layer_NutritionandHealth_5 = new L.geoJson(json_NutritionandHealth_5, {
-            attribution: '',
-            interactive: true,
-            dataVar: 'json_NutritionandHealth_5',
-            layerName: 'layer_NutritionandHealth_5',
-            pane: 'pane_NutritionandHealth_5',
-            onEachFeature: pop_NutritionandHealth_5,
-            pointToLayer: function (feature, latlng) {
-                var context = {
-                    feature: feature,
-                    variables: {}
-                };
-                return L.circleMarker(latlng, style_NutritionandHealth_5_0(feature));
-            },
-        });
-        bounds_group.addLayer(layer_NutritionandHealth_5);
-        function pop_HASTEP_6(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    if (typeof layer.closePopup == 'function') {
-                        layer.closePopup();
-                    } else {
-                        layer.eachLayer(function(feature){
-                            feature.closePopup()
-                        });
-                    }
-                },
-                mouseover: highlightFeature,
-            });
-            var popupContent = '<table>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['project'] !== null ? autolinker.link(feature.properties['project'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['activity'] !== null ? autolinker.link(feature.properties['activity'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['sitename'] !== null ? autolinker.link(feature.properties['sitename'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['address'] !== null ? autolinker.link(feature.properties['address'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
-        }
-
-        function style_HASTEP_6_0() {
-            return {
-                pane: 'pane_HASTEP_6',
-                radius: 5.0,
-                opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(141,90,153,1.0)',
-                interactive: true,
-            }
-        }
-        map.createPane('pane_HASTEP_6');
-        map.getPane('pane_HASTEP_6').style.zIndex = 406;
-        map.getPane('pane_HASTEP_6').style['mix-blend-mode'] = 'normal';
-        var layer_HASTEP_6 = new L.geoJson(json_HASTEP_6, {
-            attribution: '',
-            interactive: true,
-            dataVar: 'json_HASTEP_6',
-            layerName: 'layer_HASTEP_6',
-            pane: 'pane_HASTEP_6',
-            onEachFeature: pop_HASTEP_6,
-            pointToLayer: function (feature, latlng) {
-                var context = {
-                    feature: feature,
-                    variables: {}
-                };
-                return L.circleMarker(latlng, style_HASTEP_6_0(feature));
-            },
-        });
-        bounds_group.addLayer(layer_HASTEP_6);
-        function pop_FMNP_7(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    if (typeof layer.closePopup == 'function') {
-                        layer.closePopup();
-                    } else {
-                        layer.eachLayer(function(feature){
-                            feature.closePopup()
-                        });
-                    }
-                },
-                mouseover: highlightFeature,
-            });
-            var popupContent = '<table>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['project'] !== null ? autolinker.link(feature.properties['project'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['activity'] !== null ? autolinker.link(feature.properties['activity'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['sitename'] !== null ? autolinker.link(feature.properties['sitename'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['address'] !== null ? autolinker.link(feature.properties['address'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
-        }
-
-        function style_FMNP_7_0() {
-            return {
-                pane: 'pane_FMNP_7',
-                radius: 5.0,
-                opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(200,146,10,1.0)',
-                interactive: true,
-            }
-        }
-        map.createPane('pane_FMNP_7');
-        map.getPane('pane_FMNP_7').style.zIndex = 407;
-        map.getPane('pane_FMNP_7').style['mix-blend-mode'] = 'normal';
-        var layer_FMNP_7 = new L.geoJson(json_FMNP_7, {
-            attribution: '',
-            interactive: true,
-            dataVar: 'json_FMNP_7',
-            layerName: 'layer_FMNP_7',
-            pane: 'pane_FMNP_7',
-            onEachFeature: pop_FMNP_7,
-            pointToLayer: function (feature, latlng) {
-                var context = {
-                    feature: feature,
-                    variables: {}
-                };
-                return L.circleMarker(latlng, style_FMNP_7_0(feature));
-            },
-        });
-        bounds_group.addLayer(layer_FMNP_7);
-        function pop_4HPYD_8(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    if (typeof layer.closePopup == 'function') {
-                        layer.closePopup();
-                    } else {
-                        layer.eachLayer(function(feature){
-                            feature.closePopup()
-                        });
-                    }
-                },
-                mouseover: highlightFeature,
-            });
-            var popupContent = '<table>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['project'] !== null ? autolinker.link(feature.properties['project'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['activity'] !== null ? autolinker.link(feature.properties['activity'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['sitename'] !== null ? autolinker.link(feature.properties['sitename'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['address'] !== null ? autolinker.link(feature.properties['address'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['zipcode'] !== null ? autolinker.link(feature.properties['zipcode'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
-        }
-
-        function style_4HPYD_8_0() {
-            return {
-                pane: 'pane_4HPYD_8',
-                radius: 5.0,
+                pane: 'pane_bronx_3',
                 opacity: 1,
                 color: 'rgba(0,0,0,1.0)',
                 dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(25,190,0,1.0)',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 1.0,
+                fillOpacity: 0,
                 interactive: true,
             }
         }
-        map.createPane('pane_4HPYD_8');
-        map.getPane('pane_4HPYD_8').style.zIndex = 408;
-        map.getPane('pane_4HPYD_8').style['mix-blend-mode'] = 'normal';
-        var layer_4HPYD_8 = new L.geoJson(json_4HPYD_8, {
+        map.createPane('pane_bronx_3');
+        map.getPane('pane_bronx_3').style.zIndex = 403;
+        map.getPane('pane_bronx_3').style['mix-blend-mode'] = 'normal';
+        var layer_bronx_3 = new L.geoJson(json_bronx_3, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_4HPYD_8',
-            layerName: 'layer_4HPYD_8',
-            pane: 'pane_4HPYD_8',
-            onEachFeature: pop_4HPYD_8,
-            pointToLayer: function (feature, latlng) {
-                var context = {
-                    feature: feature,
-                    variables: {}
-                };
-                return L.circleMarker(latlng, style_4HPYD_8_0(feature));
-            },
+            dataVar: 'json_bronx_3',
+            layerName: 'layer_bronx_3',
+            pane: 'pane_bronx_3',
+            onEachFeature: pop_bronx_3,
+            style: style_bronx_3_0,
         });
-        bounds_group.addLayer(layer_4HPYD_8);
-        function pop_CUCEsites_9(feature, layer) {
+        bounds_group.addLayer(layer_bronx_3);
+        function pop_manhattan_4(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if (typeof layer.closePopup == 'function') {
+                        layer.closePopup();
+                    } else {
+                        layer.eachLayer(function(feature){
+                            feature.closePopup()
+                        });
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['name'] !== null ? autolinker.link(feature.properties['name'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['total site'] !== null ? autolinker.link(feature.properties['total site'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_manhattan_4_0() {
+            return {
+                pane: 'pane_manhattan_4',
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 1,
+                fillOpacity: 0,
+                interactive: true,
+            }
+        }
+        map.createPane('pane_manhattan_4');
+        map.getPane('pane_manhattan_4').style.zIndex = 404;
+        map.getPane('pane_manhattan_4').style['mix-blend-mode'] = 'normal';
+        var layer_manhattan_4 = new L.geoJson(json_manhattan_4, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_manhattan_4',
+            layerName: 'layer_manhattan_4',
+            pane: 'pane_manhattan_4',
+            onEachFeature: pop_manhattan_4,
+            style: style_manhattan_4_0,
+        });
+        bounds_group.addLayer(layer_manhattan_4);
+        function pop_brooklyn_5(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if (typeof layer.closePopup == 'function') {
+                        layer.closePopup();
+                    } else {
+                        layer.eachLayer(function(feature){
+                            feature.closePopup()
+                        });
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2"><strong>name</strong><br />' + (feature.properties['name'] !== null ? autolinker.link(feature.properties['name'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['total site'] !== null ? autolinker.link(feature.properties['total site'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_brooklyn_5_0() {
+            return {
+                pane: 'pane_brooklyn_5',
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 1.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+        }
+        map.createPane('pane_brooklyn_5');
+        map.getPane('pane_brooklyn_5').style.zIndex = 405;
+        map.getPane('pane_brooklyn_5').style['mix-blend-mode'] = 'normal';
+        var layer_brooklyn_5 = new L.geoJson(json_brooklyn_5, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_brooklyn_5',
+            layerName: 'layer_brooklyn_5',
+            pane: 'pane_brooklyn_5',
+            onEachFeature: pop_brooklyn_5,
+            style: style_brooklyn_5_0,
+        });
+        bounds_group.addLayer(layer_brooklyn_5);
+        function pop_CityCouncilDistrics_6(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if (typeof layer.closePopup == 'function') {
+                        layer.closePopup();
+                    } else {
+                        layer.eachLayer(function(feature){
+                            feature.closePopup()
+                        });
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2"><strong>City Counc</strong><br />' + (feature.properties['City Counc'] !== null ? autolinker.link(feature.properties['City Counc'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">total site</th>\
+                        <td>' + (feature.properties['total site'] !== null ? autolinker.link(feature.properties['total site'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_CityCouncilDistrics_6_0() {
+            return {
+                pane: 'pane_CityCouncilDistrics_6',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 1.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+        }
+        map.createPane('pane_CityCouncilDistrics_6');
+        map.getPane('pane_CityCouncilDistrics_6').style.zIndex = 406;
+        map.getPane('pane_CityCouncilDistrics_6').style['mix-blend-mode'] = 'normal';
+        var layer_CityCouncilDistrics_6 = new L.geoJson(json_CityCouncilDistrics_6, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_CityCouncilDistrics_6',
+            layerName: 'layer_CityCouncilDistrics_6',
+            pane: 'pane_CityCouncilDistrics_6',
+            onEachFeature: pop_CityCouncilDistrics_6,
+            style: style_CityCouncilDistrics_6_0,
+        });
+        bounds_group.addLayer(layer_CityCouncilDistrics_6);
+        function pop_CommunityDistricts_7(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if (typeof layer.closePopup == 'function') {
+                        layer.closePopup();
+                    } else {
+                        layer.eachLayer(function(feature){
+                            feature.closePopup()
+                        });
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2"><strong>Community</strong><br />' + (feature.properties['Community'] !== null ? autolinker.link(feature.properties['Community'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">total site</th>\
+                        <td>' + (feature.properties['total site'] !== null ? autolinker.link(feature.properties['total site'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_CommunityDistricts_7_0() {
+            return {
+                pane: 'pane_CommunityDistricts_7',
+                opacity: 1,
+                color: 'rgba(217,202,205,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 1.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+        }
+        map.createPane('pane_CommunityDistricts_7');
+        map.getPane('pane_CommunityDistricts_7').style.zIndex = 407;
+        map.getPane('pane_CommunityDistricts_7').style['mix-blend-mode'] = 'normal';
+        var layer_CommunityDistricts_7 = new L.geoJson(json_CommunityDistricts_7, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_CommunityDistricts_7',
+            layerName: 'layer_CommunityDistricts_7',
+            pane: 'pane_CommunityDistricts_7',
+            onEachFeature: pop_CommunityDistricts_7,
+            style: style_CommunityDistricts_7_0,
+        });
+        bounds_group.addLayer(layer_CommunityDistricts_7);
+        function pop_StateAssemblyDistricts_8(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if (typeof layer.closePopup == 'function') {
+                        layer.closePopup();
+                    } else {
+                        layer.eachLayer(function(feature){
+                            feature.closePopup()
+                        });
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2"><strong>State Asse</strong><br />' + (feature.properties['State Asse'] !== null ? autolinker.link(feature.properties['State Asse'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">total site</th>\
+                        <td>' + (feature.properties['total site'] !== null ? autolinker.link(feature.properties['total site'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_StateAssemblyDistricts_8_0() {
+            return {
+                pane: 'pane_StateAssemblyDistricts_8',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 1.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+        }
+        map.createPane('pane_StateAssemblyDistricts_8');
+        map.getPane('pane_StateAssemblyDistricts_8').style.zIndex = 408;
+        map.getPane('pane_StateAssemblyDistricts_8').style['mix-blend-mode'] = 'normal';
+        var layer_StateAssemblyDistricts_8 = new L.geoJson(json_StateAssemblyDistricts_8, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_StateAssemblyDistricts_8',
+            layerName: 'layer_StateAssemblyDistricts_8',
+            pane: 'pane_StateAssemblyDistricts_8',
+            onEachFeature: pop_StateAssemblyDistricts_8,
+            style: style_StateAssemblyDistricts_8_0,
+        });
+        bounds_group.addLayer(layer_StateAssemblyDistricts_8);
+        function pop_CongressionalDistricts_9(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if (typeof layer.closePopup == 'function') {
+                        layer.closePopup();
+                    } else {
+                        layer.eachLayer(function(feature){
+                            feature.closePopup()
+                        });
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2"><strong>Congressio</strong><br />' + (feature.properties['Congressio'] !== null ? autolinker.link(feature.properties['Congressio'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">total site</th>\
+                        <td>' + (feature.properties['total site'] !== null ? autolinker.link(feature.properties['total site'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_CongressionalDistricts_9_0() {
+            return {
+                pane: 'pane_CongressionalDistricts_9',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 1.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+        }
+        map.createPane('pane_CongressionalDistricts_9');
+        map.getPane('pane_CongressionalDistricts_9').style.zIndex = 409;
+        map.getPane('pane_CongressionalDistricts_9').style['mix-blend-mode'] = 'normal';
+        var layer_CongressionalDistricts_9 = new L.geoJson(json_CongressionalDistricts_9, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_CongressionalDistricts_9',
+            layerName: 'layer_CongressionalDistricts_9',
+            pane: 'pane_CongressionalDistricts_9',
+            onEachFeature: pop_CongressionalDistricts_9,
+            style: style_CongressionalDistricts_9_0,
+        });
+        bounds_group.addLayer(layer_CongressionalDistricts_9);
+        function pop_StateSenateDistricts_10(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if (typeof layer.closePopup == 'function') {
+                        layer.closePopup();
+                    } else {
+                        layer.eachLayer(function(feature){
+                            feature.closePopup()
+                        });
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2"><strong>Senate Dis</strong><br />' + (feature.properties['Senate Dis'] !== null ? autolinker.link(feature.properties['Senate Dis'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">total site</th>\
+                        <td>' + (feature.properties['total site'] !== null ? autolinker.link(feature.properties['total site'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_StateSenateDistricts_10_0() {
+            return {
+                pane: 'pane_StateSenateDistricts_10',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 1.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+        }
+        map.createPane('pane_StateSenateDistricts_10');
+        map.getPane('pane_StateSenateDistricts_10').style.zIndex = 410;
+        map.getPane('pane_StateSenateDistricts_10').style['mix-blend-mode'] = 'normal';
+        var layer_StateSenateDistricts_10 = new L.geoJson(json_StateSenateDistricts_10, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_StateSenateDistricts_10',
+            layerName: 'layer_StateSenateDistricts_10',
+            pane: 'pane_StateSenateDistricts_10',
+            onEachFeature: pop_StateSenateDistricts_10,
+            style: style_StateSenateDistricts_10_0,
+        });
+        bounds_group.addLayer(layer_StateSenateDistricts_10);
+        function pop_CUCEsites_11(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -1040,9 +1032,9 @@
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
-        function style_CUCEsites_9_0() {
+        function style_CUCEsites_11_0() {
             return {
-                pane: 'pane_CUCEsites_9',
+                pane: 'pane_CUCEsites_11',
                 radius: 2.0,
                 opacity: 1,
                 color: 'rgba(0,0,0,1.0)',
@@ -1056,27 +1048,27 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_CUCEsites_9');
-        map.getPane('pane_CUCEsites_9').style.zIndex = 409;
-        map.getPane('pane_CUCEsites_9').style['mix-blend-mode'] = 'normal';
-        var layer_CUCEsites_9 = new L.geoJson(json_CUCEsites_9, {
+        map.createPane('pane_CUCEsites_11');
+        map.getPane('pane_CUCEsites_11').style.zIndex = 411;
+        map.getPane('pane_CUCEsites_11').style['mix-blend-mode'] = 'normal';
+        var layer_CUCEsites_11 = new L.geoJson(json_CUCEsites_11, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_CUCEsites_9',
-            layerName: 'layer_CUCEsites_9',
-            pane: 'pane_CUCEsites_9',
-            onEachFeature: pop_CUCEsites_9,
+            dataVar: 'json_CUCEsites_11',
+            layerName: 'layer_CUCEsites_11',
+            pane: 'pane_CUCEsites_11',
+            onEachFeature: pop_CUCEsites_11,
             pointToLayer: function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.circleMarker(latlng, style_CUCEsites_9_0(feature));
+                return L.circleMarker(latlng, style_CUCEsites_11_0(feature));
             },
         });
-        bounds_group.addLayer(layer_CUCEsites_9);
-        map.addLayer(layer_CUCEsites_9);
-        function pop_CUCEOffices_10(feature, layer) {
+        bounds_group.addLayer(layer_CUCEsites_11);
+        map.addLayer(layer_CUCEsites_11);
+        function pop_CUCEOffices_12(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -1095,22 +1087,17 @@
                         <td>' + (feature.properties['office'] !== null ? autolinker.link(feature.properties['office'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['address'] !== null ? autolinker.link(feature.properties['address'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['Latitude'] !== null ? autolinker.link(feature.properties['Latitude'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['Longitude'] !== null ? autolinker.link(feature.properties['Longitude'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">address</th>\
+                        <td>' + (feature.properties['address'] !== null ? autolinker.link(feature.properties['address'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
-        function style_CUCEOffices_10_0() {
+        function style_CUCEOffices_12_0() {
             return {
-                pane: 'pane_CUCEOffices_10',
-                radius: 8.0,
+                pane: 'pane_CUCEOffices_12',
+                radius: 4.0,
                 opacity: 1,
                 color: 'rgba(0,0,0,1.0)',
                 dashArray: '',
@@ -1123,27 +1110,27 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_CUCEOffices_10');
-        map.getPane('pane_CUCEOffices_10').style.zIndex = 410;
-        map.getPane('pane_CUCEOffices_10').style['mix-blend-mode'] = 'normal';
-        var layer_CUCEOffices_10 = new L.geoJson(json_CUCEOffices_10, {
+        map.createPane('pane_CUCEOffices_12');
+        map.getPane('pane_CUCEOffices_12').style.zIndex = 412;
+        map.getPane('pane_CUCEOffices_12').style['mix-blend-mode'] = 'normal';
+        var layer_CUCEOffices_12 = new L.geoJson(json_CUCEOffices_12, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_CUCEOffices_10',
-            layerName: 'layer_CUCEOffices_10',
-            pane: 'pane_CUCEOffices_10',
-            onEachFeature: pop_CUCEOffices_10,
+            dataVar: 'json_CUCEOffices_12',
+            layerName: 'layer_CUCEOffices_12',
+            pane: 'pane_CUCEOffices_12',
+            onEachFeature: pop_CUCEOffices_12,
             pointToLayer: function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.circleMarker(latlng, style_CUCEOffices_10_0(feature));
+                return L.circleMarker(latlng, style_CUCEOffices_12_0(feature));
             },
         });
-        bounds_group.addLayer(layer_CUCEOffices_10);
-        map.addLayer(layer_CUCEOffices_10);
-        function pop_CityCouncilDistrics_11(feature, layer) {
+        bounds_group.addLayer(layer_CUCEOffices_12);
+        map.addLayer(layer_CUCEOffices_12);
+        function pop_PopUpVacSite_13(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -1158,339 +1145,230 @@
             });
             var popupContent = '<table>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['City Counc'] !== null ? autolinker.link(feature.properties['City Counc'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">date</th>\
+                        <td>' + (feature.properties['date'] !== null ? autolinker.link(feature.properties['date'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">total site</th>\
-                        <td>' + (feature.properties['total site'] !== null ? autolinker.link(feature.properties['total site'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">program</th>\
+                        <td>' + (feature.properties['program'] !== null ? autolinker.link(feature.properties['program'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">address</th>\
+                        <td>' + (feature.properties['address'] !== null ? autolinker.link(feature.properties['address'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">zipcode</th>\
+                        <td>' + (feature.properties['zipcode'] !== null ? autolinker.link(feature.properties['zipcode'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Dose</th>\
+                        <td>' + (feature.properties['Dose'] !== null ? autolinker.link(feature.properties['Dose'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Vaccine</th>\
+                        <td>' + (feature.properties['Vaccine'] !== null ? autolinker.link(feature.properties['Vaccine'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Actual_no_</th>\
+                        <td>' + (feature.properties['Actual_no_'] !== null ? autolinker.link(feature.properties['Actual_no_'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
-        function style_CityCouncilDistrics_11_0() {
+        function style_PopUpVacSite_13_0() {
             return {
-                pane: 'pane_CityCouncilDistrics_11',
+                pane: 'pane_PopUpVacSite_13',
+                radius: 3.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
-                dashArray: '',
-                lineCap: 'square',
-                lineJoin: 'bevel',
-                weight: 1.0,
-                fillOpacity: 0,
-                interactive: true,
-            }
-        }
-        map.createPane('pane_CityCouncilDistrics_11');
-        map.getPane('pane_CityCouncilDistrics_11').style.zIndex = 411;
-        map.getPane('pane_CityCouncilDistrics_11').style['mix-blend-mode'] = 'normal';
-        var layer_CityCouncilDistrics_11 = new L.geoJson(json_CityCouncilDistrics_11, {
-            attribution: '',
-            interactive: true,
-            dataVar: 'json_CityCouncilDistrics_11',
-            layerName: 'layer_CityCouncilDistrics_11',
-            pane: 'pane_CityCouncilDistrics_11',
-            onEachFeature: pop_CityCouncilDistrics_11,
-            style: style_CityCouncilDistrics_11_0,
-        });
-        bounds_group.addLayer(layer_CityCouncilDistrics_11);
-        function pop_CommunityDistricts_12(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    if (typeof layer.closePopup == 'function') {
-                        layer.closePopup();
-                    } else {
-                        layer.eachLayer(function(feature){
-                            feature.closePopup()
-                        });
-                    }
-                },
-                mouseover: highlightFeature,
-            });
-            var popupContent = '<table>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['Community'] !== null ? autolinker.link(feature.properties['Community'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">total site</th>\
-                        <td>' + (feature.properties['total site'] !== null ? autolinker.link(feature.properties['total site'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
-        }
-
-        function style_CommunityDistricts_12_0() {
-            return {
-                pane: 'pane_CommunityDistricts_12',
-                opacity: 1,
-                color: 'rgba(217,202,205,1.0)',
-                dashArray: '',
-                lineCap: 'square',
-                lineJoin: 'bevel',
-                weight: 1.0,
-                fillOpacity: 0,
-                interactive: true,
-            }
-        }
-        map.createPane('pane_CommunityDistricts_12');
-        map.getPane('pane_CommunityDistricts_12').style.zIndex = 412;
-        map.getPane('pane_CommunityDistricts_12').style['mix-blend-mode'] = 'normal';
-        var layer_CommunityDistricts_12 = new L.geoJson(json_CommunityDistricts_12, {
-            attribution: '',
-            interactive: true,
-            dataVar: 'json_CommunityDistricts_12',
-            layerName: 'layer_CommunityDistricts_12',
-            pane: 'pane_CommunityDistricts_12',
-            onEachFeature: pop_CommunityDistricts_12,
-            style: style_CommunityDistricts_12_0,
-        });
-        bounds_group.addLayer(layer_CommunityDistricts_12);
-        function pop_StateAssemblyDistricts_13(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    if (typeof layer.closePopup == 'function') {
-                        layer.closePopup();
-                    } else {
-                        layer.eachLayer(function(feature){
-                            feature.closePopup()
-                        });
-                    }
-                },
-                mouseover: highlightFeature,
-            });
-            var popupContent = '<table>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['State Asse'] !== null ? autolinker.link(feature.properties['State Asse'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">total site</th>\
-                        <td>' + (feature.properties['total site'] !== null ? autolinker.link(feature.properties['total site'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
-        }
-
-        function style_StateAssemblyDistricts_13_0() {
-            return {
-                pane: 'pane_StateAssemblyDistricts_13',
-                opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
-                dashArray: '',
-                lineCap: 'square',
-                lineJoin: 'bevel',
-                weight: 1.0,
-                fillOpacity: 0,
-                interactive: true,
-            }
-        }
-        map.createPane('pane_StateAssemblyDistricts_13');
-        map.getPane('pane_StateAssemblyDistricts_13').style.zIndex = 413;
-        map.getPane('pane_StateAssemblyDistricts_13').style['mix-blend-mode'] = 'normal';
-        var layer_StateAssemblyDistricts_13 = new L.geoJson(json_StateAssemblyDistricts_13, {
-            attribution: '',
-            interactive: true,
-            dataVar: 'json_StateAssemblyDistricts_13',
-            layerName: 'layer_StateAssemblyDistricts_13',
-            pane: 'pane_StateAssemblyDistricts_13',
-            onEachFeature: pop_StateAssemblyDistricts_13,
-            style: style_StateAssemblyDistricts_13_0,
-        });
-        bounds_group.addLayer(layer_StateAssemblyDistricts_13);
-        function pop_CongressionalDistricts_14(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    if (typeof layer.closePopup == 'function') {
-                        layer.closePopup();
-                    } else {
-                        layer.eachLayer(function(feature){
-                            feature.closePopup()
-                        });
-                    }
-                },
-                mouseover: highlightFeature,
-            });
-            var popupContent = '<table>\
-                    <tr>\
-                        <td colspan="2"><strong>Congressio</strong><br />' + (feature.properties['Congressio'] !== null ? autolinker.link(feature.properties['Congressio'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">total site</th>\
-                        <td>' + (feature.properties['total site'] !== null ? autolinker.link(feature.properties['total site'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
-        }
-
-        function style_CongressionalDistricts_14_0() {
-            return {
-                pane: 'pane_CongressionalDistricts_14',
-                opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
-                dashArray: '',
-                lineCap: 'square',
-                lineJoin: 'bevel',
-                weight: 1.0,
-                fillOpacity: 0,
-                interactive: true,
-            }
-        }
-        map.createPane('pane_CongressionalDistricts_14');
-        map.getPane('pane_CongressionalDistricts_14').style.zIndex = 414;
-        map.getPane('pane_CongressionalDistricts_14').style['mix-blend-mode'] = 'normal';
-        var layer_CongressionalDistricts_14 = new L.geoJson(json_CongressionalDistricts_14, {
-            attribution: '',
-            interactive: true,
-            dataVar: 'json_CongressionalDistricts_14',
-            layerName: 'layer_CongressionalDistricts_14',
-            pane: 'pane_CongressionalDistricts_14',
-            onEachFeature: pop_CongressionalDistricts_14,
-            style: style_CongressionalDistricts_14_0,
-        });
-        bounds_group.addLayer(layer_CongressionalDistricts_14);
-        function pop_StateSenateDistricts_15(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    if (typeof layer.closePopup == 'function') {
-                        layer.closePopup();
-                    } else {
-                        layer.eachLayer(function(feature){
-                            feature.closePopup()
-                        });
-                    }
-                },
-                mouseover: highlightFeature,
-            });
-            var popupContent = '<table>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['Senate Dis'] !== null ? autolinker.link(feature.properties['Senate Dis'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">total site</th>\
-                        <td>' + (feature.properties['total site'] !== null ? autolinker.link(feature.properties['total site'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
-        }
-
-        function style_StateSenateDistricts_15_0() {
-            return {
-                pane: 'pane_StateSenateDistricts_15',
-                opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
-                dashArray: '',
-                lineCap: 'square',
-                lineJoin: 'bevel',
-                weight: 1.0,
-                fillOpacity: 0,
-                interactive: true,
-            }
-        }
-        map.createPane('pane_StateSenateDistricts_15');
-        map.getPane('pane_StateSenateDistricts_15').style.zIndex = 415;
-        map.getPane('pane_StateSenateDistricts_15').style['mix-blend-mode'] = 'normal';
-        var layer_StateSenateDistricts_15 = new L.geoJson(json_StateSenateDistricts_15, {
-            attribution: '',
-            interactive: true,
-            dataVar: 'json_StateSenateDistricts_15',
-            layerName: 'layer_StateSenateDistricts_15',
-            pane: 'pane_StateSenateDistricts_15',
-            onEachFeature: pop_StateSenateDistricts_15,
-            style: style_StateSenateDistricts_15_0,
-        });
-        bounds_group.addLayer(layer_StateSenateDistricts_15);
-        function pop_FEMAVACCINATIONSITES_16(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    if (typeof layer.closePopup == 'function') {
-                        layer.closePopup();
-                    } else {
-                        layer.eachLayer(function(feature){
-                            feature.closePopup()
-                        });
-                    }
-                },
-                mouseover: highlightFeature,
-            });
-            var popupContent = '<table>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['Name'] !== null ? autolinker.link(feature.properties['Name'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['Address'] !== null ? autolinker.link(feature.properties['Address'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['Latitude'] !== null ? autolinker.link(feature.properties['Latitude'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['Longitude'] !== null ? autolinker.link(feature.properties['Longitude'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['Info'] !== null ? autolinker.link(feature.properties['Info'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
-        }
-
-        function style_FEMAVACCINATIONSITES_16_0() {
-            return {
-                pane: 'pane_FEMAVACCINATIONSITES_16',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(128,17,25,1.0)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
-                weight: 2.0,
+                weight: 1,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(183,72,75,1.0)',
+                fillColor: 'rgba(0,128,128,1.0)',
                 interactive: true,
             }
         }
-        map.createPane('pane_FEMAVACCINATIONSITES_16');
-        map.getPane('pane_FEMAVACCINATIONSITES_16').style.zIndex = 416;
-        map.getPane('pane_FEMAVACCINATIONSITES_16').style['mix-blend-mode'] = 'normal';
-        var layer_FEMAVACCINATIONSITES_16 = new L.geoJson(json_FEMAVACCINATIONSITES_16, {
+        map.createPane('pane_PopUpVacSite_13');
+        map.getPane('pane_PopUpVacSite_13').style.zIndex = 413;
+        map.getPane('pane_PopUpVacSite_13').style['mix-blend-mode'] = 'normal';
+        var layer_PopUpVacSite_13 = new L.geoJson(json_PopUpVacSite_13, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_FEMAVACCINATIONSITES_16',
-            layerName: 'layer_FEMAVACCINATIONSITES_16',
-            pane: 'pane_FEMAVACCINATIONSITES_16',
-            onEachFeature: pop_FEMAVACCINATIONSITES_16,
+            dataVar: 'json_PopUpVacSite_13',
+            layerName: 'layer_PopUpVacSite_13',
+            pane: 'pane_PopUpVacSite_13',
+            onEachFeature: pop_PopUpVacSite_13,
             pointToLayer: function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.circleMarker(latlng, style_FEMAVACCINATIONSITES_16_0(feature));
+                return L.circleMarker(latlng, style_PopUpVacSite_13_0(feature));
             },
         });
-        bounds_group.addLayer(layer_FEMAVACCINATIONSITES_16);
+        bounds_group.addLayer(layer_PopUpVacSite_13);
+        map.addLayer(layer_PopUpVacSite_13);
+        function pop_FEMAVacSites_14(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if (typeof layer.closePopup == 'function') {
+                        layer.closePopup();
+                    } else {
+                        layer.eachLayer(function(feature){
+                            feature.closePopup()
+                        });
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">site name</th>\
+                        <td>' + (feature.properties['site name'] !== null ? autolinker.link(feature.properties['site name'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">address</th>\
+                        <td>' + (feature.properties['address'] !== null ? autolinker.link(feature.properties['address'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_FEMAVacSites_14_0() {
+            return {
+                pane: 'pane_FEMAVacSites_14',
+                radius: 6.0,
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(196,60,57,1.0)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_FEMAVacSites_14');
+        map.getPane('pane_FEMAVacSites_14').style.zIndex = 414;
+        map.getPane('pane_FEMAVacSites_14').style['mix-blend-mode'] = 'normal';
+        var layer_FEMAVacSites_14 = new L.geoJson(json_FEMAVacSites_14, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_FEMAVacSites_14',
+            layerName: 'layer_FEMAVacSites_14',
+            pane: 'pane_FEMAVacSites_14',
+            onEachFeature: pop_FEMAVacSites_14,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.circleMarker(latlng, style_FEMAVacSites_14_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_FEMAVacSites_14);
+        function pop_CommunityBasedVacSites_15(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if (typeof layer.closePopup == 'function') {
+                        layer.closePopup();
+                    } else {
+                        layer.eachLayer(function(feature){
+                            feature.closePopup()
+                        });
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">Church Bas</th>\
+                        <td>' + (feature.properties['Church Bas'] !== null ? autolinker.link(feature.properties['Church Bas'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_CommunityBasedVacSites_15_0() {
+            return {
+                pane: 'pane_CommunityBasedVacSites_15',
+                radius: 4.0,
+                opacity: 1,
+                color: 'rgba(242,242,242,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(90,82,82,1.0)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_CommunityBasedVacSites_15');
+        map.getPane('pane_CommunityBasedVacSites_15').style.zIndex = 415;
+        map.getPane('pane_CommunityBasedVacSites_15').style['mix-blend-mode'] = 'normal';
+        var layer_CommunityBasedVacSites_15 = new L.geoJson(json_CommunityBasedVacSites_15, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_CommunityBasedVacSites_15',
+            layerName: 'layer_CommunityBasedVacSites_15',
+            pane: 'pane_CommunityBasedVacSites_15',
+            onEachFeature: pop_CommunityBasedVacSites_15,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.circleMarker(latlng, style_CommunityBasedVacSites_15_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_CommunityBasedVacSites_15);
+        map.addLayer(layer_CommunityBasedVacSites_15);
         var baseMaps = {};
-        L.control.layers(baseMaps,{'<img src="legend/FEMAVACCINATIONSITES_16.png" /> FEMA VACCINATION SITES': layer_FEMAVACCINATIONSITES_16,'<img src="legend/StateSenateDistricts_15.png" /> State Senate Districts': layer_StateSenateDistricts_15,'<img src="legend/CongressionalDistricts_14.png" /> Congressional Districts': layer_CongressionalDistricts_14,'<img src="legend/StateAssemblyDistricts_13.png" /> State Assembly Districts': layer_StateAssemblyDistricts_13,'<img src="legend/CommunityDistricts_12.png" /> Community Districts': layer_CommunityDistricts_12,'<img src="legend/CityCouncilDistrics_11.png" /> City Council Districs': layer_CityCouncilDistrics_11,'<img src="legend/CUCEOffices_10.png" /> CUCE Offices': layer_CUCEOffices_10,'<img src="legend/CUCEsites_9.png" /> CUCE sites': layer_CUCEsites_9,'<img src="legend/4HPYD_8.png" /> 4H/PYD': layer_4HPYD_8,'<img src="legend/FMNP_7.png" /> FMNP': layer_FMNP_7,'<img src="legend/HASTEP_6.png" /> HASTEP': layer_HASTEP_6,'<img src="legend/NutritionandHealth_5.png" /> Nutrition and Health': layer_NutritionandHealth_5,'<img src="legend/Parenting_4.png" /> Parenting': layer_Parenting_4,'<img src="legend/UrbanFarming_3.png" /> Urban Farming': layer_UrbanFarming_3,'<img src="legend/SubwayLines_2.png" /> Subway Lines': layer_SubwayLines_2,'CDC Social Vuln. Index<br /><table><tr><td style="text-align: center;"><img src="legend/CDCSocialVulnIndex_1_00250.png" /></td><td>0 - 0.25</td></tr><tr><td style="text-align: center;"><img src="legend/CDCSocialVulnIndex_1_025051.png" /></td><td>0.25 - 0.5</td></tr><tr><td style="text-align: center;"><img src="legend/CDCSocialVulnIndex_1_050752.png" /></td><td>0.5 - 0.75</td></tr><tr><td style="text-align: center;"><img src="legend/CDCSocialVulnIndex_1_07513.png" /></td><td>0.75 - 1</td></tr></table>': layer_CDCSocialVulnIndex_1,"CartoDb Positron": layer_CartoDbPositron_0,}).addTo(map);
+        L.control.layers(baseMaps,{'<img src="legend/CommunityBasedVacSites_15.png" /> Community Based Vac Sites': layer_CommunityBasedVacSites_15,'<img src="legend/FEMAVacSites_14.png" /> FEMA Vac Sites': layer_FEMAVacSites_14,'<img src="legend/PopUpVacSite_13.png" /> Pop Up Vac Site': layer_PopUpVacSite_13,'<img src="legend/CUCEOffices_12.png" /> CUCE Offices': layer_CUCEOffices_12,'<img src="legend/CUCEsites_11.png" /> CUCE sites': layer_CUCEsites_11,'<img src="legend/StateSenateDistricts_10.png" /> State Senate Districts': layer_StateSenateDistricts_10,'<img src="legend/CongressionalDistricts_9.png" /> Congressional Districts': layer_CongressionalDistricts_9,'<img src="legend/StateAssemblyDistricts_8.png" /> State Assembly Districts': layer_StateAssemblyDistricts_8,'<img src="legend/CommunityDistricts_7.png" /> Community Districts': layer_CommunityDistricts_7,'<img src="legend/CityCouncilDistrics_6.png" /> City Council Districs': layer_CityCouncilDistrics_6,'<img src="legend/brooklyn_5.png" /> brooklyn': layer_brooklyn_5,'<img src="legend/manhattan_4.png" /> manhattan': layer_manhattan_4,'<img src="legend/bronx_3.png" /> bronx': layer_bronx_3,'<img src="legend/queens_2.png" /> queens': layer_queens_2,'SVI2018_NEWYORK_tract<br /><table><tr><td style="text-align: center;"><img src="legend/SVI2018_NEWYORK_tract_1_00250.png" /></td><td>0 - 0.25</td></tr><tr><td style="text-align: center;"><img src="legend/SVI2018_NEWYORK_tract_1_025051.png" /></td><td>0.25 - 0.5</td></tr><tr><td style="text-align: center;"><img src="legend/SVI2018_NEWYORK_tract_1_050752.png" /></td><td>0.5 - 0.75</td></tr><tr><td style="text-align: center;"><img src="legend/SVI2018_NEWYORK_tract_1_07513.png" /></td><td>0.75 - 1</td></tr></table>': layer_SVI2018_NEWYORK_tract_1,"CartoDb Positron": layer_CartoDbPositron_0,}).addTo(map);
         setBounds();
         var i = 0;
-        layer_CUCEOffices_10.eachLayer(function(layer) {
+        layer_CUCEOffices_12.eachLayer(function(layer) {
             var context = {
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['office'] !== null?String('<div style="color: #000000; font-size: 10pt; font-family: \'MS Shell Dlg 2\', sans-serif;">' + layer.feature.properties['office']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_CUCEOffices_10'});
+            layer.bindTooltip((layer.feature.properties['office'] !== null?String('<div style="color: #000000; font-size: 10pt; font-family: \'MS Shell Dlg 2\', sans-serif;">' + layer.feature.properties['office']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_CUCEOffices_12'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
               addLabel(layer, i);
               i++;
         });
-        resetLabels([layer_CUCEOffices_10]);
+        var i = 0;
+        layer_CommunityBasedVacSites_15.eachLayer(function(layer) {
+            var context = {
+                feature: layer.feature,
+                variables: {}
+            };
+            layer.bindTooltip((layer.feature.properties['Church Bas'] !== null?String('<div style="color: #000000; font-size: 8pt; font-family: \'MS Shell Dlg 2\', sans-serif;">' + layer.feature.properties['Church Bas']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_CommunityBasedVacSites_15'});
+            labels.push(layer);
+            totalMarkers += 1;
+              layer.added = true;
+              addLabel(layer, i);
+              i++;
+        });
+        resetLabels([layer_CUCEOffices_12,layer_CommunityBasedVacSites_15]);
         map.on("zoomend", function(){
-            resetLabels([layer_CUCEOffices_10]);
+            resetLabels([layer_CUCEOffices_12,layer_CommunityBasedVacSites_15]);
         });
         map.on("layeradd", function(){
-            resetLabels([layer_CUCEOffices_10]);
+            resetLabels([layer_CUCEOffices_12,layer_CommunityBasedVacSites_15]);
         });
         map.on("layerremove", function(){
-            resetLabels([layer_CUCEOffices_10]);
+            resetLabels([layer_CUCEOffices_12,layer_CommunityBasedVacSites_15]);
         });
         </script>
     </body>
